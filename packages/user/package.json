@@ -1,6 +1,6 @@
 {
   "name": "@smoex-business/user",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "A simplify work flow for redux",
   "main": "build/index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lynnkoo/smoex-common-business.git"
+    "url": "git+https://github.com/smoex-business/smoex-business.git"
   },
   "keywords": [
     "redux-async-kit",
@@ -23,9 +23,9 @@
   "author": "lynnkoo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lynnkoo/rsmoex-common-business/issues"
+    "url": "https://github.com/smoex-business/smoex-business/issues"
   },
-  "homepage": "https://github.com/lynnkoo/smoex-common-business#readme",
+  "homepage": "https://github.com/smoex-business/smoex-business#readme",
   "dependencies": {
     "@smoex-business/basic": "^0.0.2",
     "@types/react-redux": "^7.1.9",
