@@ -4,14 +4,14 @@ import { createReducer } from 'redux-async-kit'
 const initialState = {
   loading: false,
   error: null,
-  payload: null,
+  payload: undefined,
 }
 
 const reducerMap = (state: any) => ({
   [ACCOUNT_ASYNC_ACTION.GET_INFO]: () => {
     state.loading = true
     state.error = null
-    state.payload = null
+    state.payload = undefined
   },
   [ACCOUNT_ACTION.SET_INFO]: ({ payload }: any) => {
     state.loading = false
@@ -20,7 +20,7 @@ const reducerMap = (state: any) => ({
   [ACCOUNT_ACTION.SET_ERROR]: ({ error }: any) => {
     state.loading = false
     state.error = error
-    state.payload = null
+    state.payload = undefined
   },
 })
 
