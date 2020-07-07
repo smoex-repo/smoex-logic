@@ -1,15 +1,7 @@
-import { combineReducers } from 'redux'
 import { createSlice } from 'redux-async-kit'
 import { accountReducer } from './account'
+export * from './account/reducers'
 
-export const commonReducer = {
-  commonAccount: accountReducer,
-}
-
-export const commonSlice = createSlice('common', {
+export const userSlice = createSlice('common/user', {
   account: accountReducer,
 })
-export const userSlice = createSlice('user', {
-  account: accountReducer,
-})
-export { accountReducer }

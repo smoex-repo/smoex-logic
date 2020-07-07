@@ -1,4 +1,4 @@
-import AxiosClient, { AxiosInstance, AxiosRequestConfig, Method } from 'axios'
+import AxiosClient, { AxiosInstance } from 'axios'
 import * as qs from 'qs'
 
 export class APIError {
@@ -13,8 +13,15 @@ export class APIError {
   }
 }
 
-export const proxyClient = createClient('/api')
-export const apiClient = createClient('https://api.smoex.com')
+type IFetchConfig = {
+    axiosClient?: AxiosInstance
+}
+
+let fetchConfig: IFetchConfig = {}
+
+export function configureFetch(config: IFetchConfig) {
+    fetchConfig = { ...fetchConfig, ...config }
+}
 
 export const withFormData = (params: any) => {
     const formData = new FormData()
@@ -24,13 +31,15 @@ export const withFormData = (params: any) => {
     return formData
 }
 
-export class FetchAPI {
-    protected proxy: AxiosInstance
-    constructor(proxy: AxiosInstance = proxyClient) {
-        this.proxy = proxy
-    }
-}
+export const proxyClient = createClient('/api')
+export const apiClient = createClient('https://api.smoex.com')
 
+export const proxy = new Proxy(proxyClient, {
+    get(target, prop) {
+        const { axiosClient } = fetchConfig
+        return (axiosClient || target as any)[prop]
+    },
+})
 
 export function createClient(baseURL: string) {
     const client = AxiosClient.create({

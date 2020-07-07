@@ -1,4 +1,4 @@
-import { FetchAPI } from '@smoex-business/basic'
+import { proxy } from '@smoex-business/basic'
 
 type ISendCodeParams = {
   target: string
@@ -9,12 +9,11 @@ type IVerifyCodeParams = {
   scene: 'login' | 'register'
 }
 
-export class SecurityAPI extends FetchAPI {
+export const securityApi = {
   sendCode(params: ISendCodeParams){
-    return this.proxy.post('/security/sendcode', params)
-  }
+    return proxy.post('/security/sendcode', params)
+  },
   verifyCode(params: IVerifyCodeParams) {
-    return this.proxy.post('/security/verifycode', params)
-  }
+    return proxy.post('/security/verifycode', params)
+  },
 }
-export const securityApi = new SecurityAPI()

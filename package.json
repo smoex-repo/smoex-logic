@@ -7,7 +7,7 @@
     "yarn": ">=1.5.1"
   },
   "scripts": {
-    "start": "start-storybook -p 6007",
+    "start": "start-storybook -p 3000",
     "init": "yarn install && lerna bootstrap --use-workspaces && npm run build",
     "build": "lerna run --stream --sort build",
     "build:prod": "npm run clean:cache && npm run build",
