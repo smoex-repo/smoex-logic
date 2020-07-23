@@ -54,6 +54,9 @@ export function createClient(baseURL: string) {
             if (!body) {
                 return body
             }
+            if (typeof body === 'string') {
+                body = JSON.parse(body)
+            }
             // const xbody = {
             //     data: {}, // data // error
             //     code: -1,
@@ -62,7 +65,7 @@ export function createClient(baseURL: string) {
                 return body.data
             } else {
                 // return data
-                throw new APIError(body.code || -1, body.data.message, body)
+                throw new APIError(body.code || -1, body.data?.message, body)
             }
         },
         transformRequest: (params) => {
@@ -74,12 +77,12 @@ export function createClient(baseURL: string) {
     })
     client.interceptors.response.use(
         (response) => {
-          return response.data
+            return response.data
         },
         (error) => {
             if (error.isAxiosError) {
               const { response = {} } = error
-              const axiosError = new APIError(response.status || -1, response.statusText, error)
+              const axiosError = new APIError(response.status || -2, response.statusText, error)
               return Promise.reject(axiosError)
             }
           return Promise.reject(error)
