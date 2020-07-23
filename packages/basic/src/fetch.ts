@@ -23,13 +23,13 @@ export function configureFetch(config: IFetchConfig) {
     fetchConfig = { ...fetchConfig, ...config }
 }
 
-export const withFormData = (params: any) => {
-    const formData = new FormData()
-    Object.keys(params).forEach((key) => {
-      formData.append(key, params[key])
-    })
-    return formData
-}
+// export const withFormData = (params: any) => {
+//     const formData = new FormData()
+//     Object.keys(params).forEach((key) => {
+//       formData.append(key, params[key])
+//     })
+//     return formData
+// }
 
 export const proxyClient = createClient('/api')
 export const apiClient = createClient('https://api.smoex.com')
@@ -66,9 +66,9 @@ export function createClient(baseURL: string) {
             }
         },
         transformRequest: (params) => {
-            if (params instanceof FormData) {
-                return params
-            }
+            // if (params instanceof FormData) {
+            //     return params
+            // }
             return qs.stringify(params)
         },
     })
