@@ -11479,10 +11479,10 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-logic-utils@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/react-logic-utils/-/react-logic-utils-0.0.3.tgz#94c2c67633a873f3850af655d90c72dbdccbb23d"
-  integrity sha512-Je0fXR9Xt1sRTmGVassEDPC6pJllhGd41OmkkxUwe0XXVBSaYIgWrfl59RDssRxqWCoOxtOO/NHqGoqx3CTosQ==
+react-logic-utils@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/react-logic-utils/-/react-logic-utils-0.0.4.tgz#21af33993a2c556dbf77185cff2aebc9b856151d"
+  integrity sha512-h6EGGD8PVUAxO24HAqAKVKpespcCmuo8q9mkJ1MO9wf1PObZRwTIKu/Z0xV5qpejD1ajUAvBQ6u4G3zCnZmzEw==
   dependencies:
     basic-kit-js "^0.0.1"
     immer "^7.0.1"
@@ -11742,16 +11742,16 @@ redent@^3.0.0:
     indent-string "^4.0.0"
     strip-indent "^3.0.0"
 
-redux-async-kit@^0.0.16:
-  version "0.0.16"
-  resolved "https://registry.yarnpkg.com/redux-async-kit/-/redux-async-kit-0.0.16.tgz#664eb18fe2309b7e3aa718699046438aefde7162"
-  integrity sha512-hllQ3tsWKWIG2MAutlqVUPEgFboEhcD1rw/wFHGygkMzoPEx3pH47zWMDv5dEVzRbGh8hFDQCzt8kzWYboxEkg==
+redux-async-kit@^0.0.20:
+  version "0.0.20"
+  resolved "https://registry.yarnpkg.com/redux-async-kit/-/redux-async-kit-0.0.20.tgz#b012e67e0ad39a3dc6419033a6353dbb7c0ad626"
+  integrity sha512-YyogXnUvLIomjVmJB0Wk5ozIXTK8ST9Vc4HIFY1EU7xYkE7d45N3T3OuVrfhYUQsCay6Y3HpBNoOm5WPp41rsg==
   dependencies:
     basic-kit-js "^0.0.1"
     immer "^5.1.0"
     lodash "^4.17.15"
     react "^16.11.0"
-    react-logic-utils "^0.0.3"
+    react-logic-utils "^0.0.4"
     react-redux "^7.1.3"
     redux "^4.0.5"
     redux-devtools-extension "^2.13.8"

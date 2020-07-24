@@ -32,7 +32,7 @@
     "axios": "^0.19.0",
     "qs": "^6.9.1",
     "react": "^16.11.0",
-    "redux-async-kit": "^0.0.16"
+    "redux-async-kit": "^0.0.20"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",

@@ -37,7 +37,7 @@
     "axios": "^0.19.2",
     "basic-kit-js": "^0.0.3",
     "qs": "^6.9.4",
-    "redux-async-kit": "^0.0.16"
+    "redux-async-kit": "^0.0.20"
   },
   "gitHead": "79f87e2db000ffff809aa7b0ab88e70c352b92b8"
 }
