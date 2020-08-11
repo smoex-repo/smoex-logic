@@ -1,8 +1,9 @@
 import * as React from 'react'
 import { configureStore, useAsyncEffect, useAsyncCallback } from 'redux-async-kit'
 import { Provider } from 'react-redux'
-import { configureFetch, apiClient } from '@smoex-business/basic'
+import { proxy } from '@smoex-business/basic'
 import { userSlice, accountSelector, accountAsyncAction } from '../index'
+// proxy.defaults.baseURL = "https://www.smoex.com"
 
 // configureFetch({
 //     axiosClient:
