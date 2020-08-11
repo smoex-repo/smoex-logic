@@ -25,21 +25,6 @@ export class TransferData {
     }
 }
 
-// export const withFormData = (params: any) => {
-//     return new TransferData(params, 'form-data')
-// }
-
-
-// type IFetchConfig = {
-//     axiosClient?: AxiosInstance
-// }
-
-// let fetchConfig: IFetchConfig = {}
-
-// export function configureFetch(config: IFetchConfig) {
-//     fetchConfig = { ...fetchConfig, ...config }
-// }
-
 export const proxy = AxiosClient.create({
     baseURL: '/api',
     timeout: 100000,
@@ -48,7 +33,8 @@ export const proxy = AxiosClient.create({
     headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
     },
-    transformResponse: (body) => {
+    transformResponse: (resp) => {
+        let body = resp?.body
         if (!body) {
             return body
         }
@@ -62,7 +48,6 @@ export const proxy = AxiosClient.create({
         if (body.code === 0) {
             return body.data
         } else {
-            // return data
             throw new APIError(body.code || -1, body.data?.message, body)
         }
     },
@@ -84,9 +69,7 @@ export const proxy = AxiosClient.create({
 })
 
 proxy.interceptors.response.use(
-    resp => {
-        return resp.data
-    },
+    resp => resp,
     err => {
         if (err.isAxiosError) {
           const { response = {} } = err
@@ -96,20 +79,3 @@ proxy.interceptors.response.use(
       return Promise.reject(err)
     },
 )
-
-// export function transformToNodeClient() {
-
-// }
-// export const apiClient = createClient('https://api.smoex.com')
-
-// export const proxy = new Proxy(proxyClient, {
-//     get(target, prop) {
-//         const { axiosClient } = fetchConfig
-//         return (axiosClient || target as any)[prop]
-//     },
-// })
-
-// export function createClient(baseURL: string) {
-//     const client = 
-//     return client
-// }
