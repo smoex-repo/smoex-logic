@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smoex-logic/smoex-business.git"
+    "url": "git+https://github.com/smoex-logic/logic.git"
   },
   "keywords": [
     "redux-async-kit",
@@ -43,5 +43,5 @@
     "react-redux": "^7.1.3",
     "typescript": "^3.2.2"
   },
-  "gitHead": "79f87e2db000ffff809aa7b0ab88e70c352b92b8"
+  "gitHead": "93cea76c1a14804b6694531226ee0bfc0fb12966"
 }
