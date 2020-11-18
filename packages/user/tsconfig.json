@@ -3,7 +3,7 @@
     "outDir": "lib",
     "target": "es6",
     "jsx": "react",
-    "module": "esnext",
+    "module": "es6",
     "moduleResolution": "node",
     "declaration": true,
     "rootDir": "src",

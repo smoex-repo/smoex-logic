@@ -1,4 +1,4 @@
-import { createSlice } from 'redux-async-kit'
+import { createSlice } from '@react-kits/redux'
 import { accountReducer } from './account'
 export * from './account/reducers'
 

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { configureStore } from 'redux-async-kit'
+import { configureStore } from '@react-kits/redux'
 import { Provider } from 'react-redux'
 
 export default {

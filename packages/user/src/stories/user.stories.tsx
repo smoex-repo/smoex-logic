@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { configureStore, useAsyncEffect, useAsyncCallback } from 'redux-async-kit'
-import { Provider } from 'react-redux'
+import { configureStore, useAsyncEffect, useAsyncCallback } from '@react-kits/redux'
+import { Provider, useSelector } from 'react-redux'
 import { userSlice, accountSelector, accountAsyncAction } from '../index'
 // proxy.defaults.baseURL = "https://www.smoex.com"
 
@@ -16,12 +16,14 @@ export default {
 const store = configureStore({
     injector: userSlice.injector,
 })
+console.log(store)
 
-const AccountBasic = () => {
+const AccountBasic: React.FC = () => {
     const [info] = userSlice.useSelector(accountSelector.info)
     const [getInfo, infoState] = userSlice.useAction(accountAsyncAction.getInfo)
     const [login, loginState] = userSlice.useAction(accountAsyncAction.login)
     const [logout] = userSlice.useAction(accountAsyncAction.logout)
+
     useAsyncEffect(async () => {
         await getInfo()
     })
@@ -39,6 +41,14 @@ const AccountBasic = () => {
             <div onClick={onLogin}>login {loginState.loading && 'loading'}</div>
             <div onClick={onLogout}>logout</div>
         </div>
+    )
+}
+const Test: React.FC = () => {
+    const info = userSlice.useSelector(accountSelector.info)
+    const x = useSelector(x => x)
+    console.log(x, info)
+    return (
+        <div>2131312</div>
     )
 }
 

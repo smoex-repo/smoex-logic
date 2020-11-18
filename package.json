@@ -1,7 +1,9 @@
 {
   "name": "smoex-logic",
   "private": true,
-  "workspaces": [ "packages/*" ],
+  "workspaces": [
+    "packages/*"
+  ],
   "engines": {
     "node": ">=10.15.0",
     "yarn": ">=1.5.1"
@@ -20,16 +22,25 @@
     "test": "jest --coverage"
   },
   "devDependencies": {
-    "@storybook/addon-info": "^5.2.8",
-    "@storybook/react": "^5.2.8",
+    "@babel/core": "^7.12.3",
+    "@storybook/addon-info": "5.3.21",
+    "@storybook/react": "5.3.21",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.2.1",
     "cross-env": "^7.0.2",
     "husky": "^4.2.5",
     "jest": "^26.0.1",
     "lerna": "^3.20.2",
     "lint-staged": "^10.2.10",
     "prettier": "^2.0.5",
+    "react": "^17.0.1",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "react-dom": "^17.0.1",
     "rimraf": "^3.0.2",
     "ts-jest": "^26.1.0",
     "tslint": "^6.1.2"
+  },
+  "dependencies": {
+    "http-proxy-middleware": "^1.0.6"
   }
 }

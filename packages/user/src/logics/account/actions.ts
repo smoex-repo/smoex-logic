@@ -1,7 +1,7 @@
 import { ACCOUNT_ACTION, ACCOUNT_ASYNC_ACTION } from './enums'
 import { accountApi } from '../../apis/account'
 import { securityApi } from '../../apis/security'
-import { createPayloadAction } from 'redux-async-kit'
+import { createPayloadAction } from '@react-kits/redux'
 
 export const accountAction = {
   setInfo: createPayloadAction(ACCOUNT_ACTION.SET_INFO),
