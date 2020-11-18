@@ -1,6 +1,6 @@
 {
   "name": "@smoex-logic/user",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simplify work flow for redux",
   "main": "lib/index.js",
   "scripts": {
@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@react-kits/redux": "^0.0.4",
-    "@smoex-logic/basic": "^0.0.1",
+    "@smoex-logic/basic": "^0.0.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
